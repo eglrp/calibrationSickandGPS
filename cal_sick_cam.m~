@@ -1,0 +1,16 @@
+fileFolder = fullfile('/home/xiesc/cal_sick_cam');
+calfile=dir(fullfile(fileFolder,'*'));
+calfile(1:2)=[];
+num_cal = size(calfile,1);
+datain = cell(1,num_cal);
+for i =1:1:num_cal
+    tmp = load([calfile(i).folder  '/' calfile(i).name '/' 'plane.mat']);
+    datain{i,1} =  tmp.plane;
+    
+    tmp = load([calfile(i).folder  '/' calfile(i).name '/' 'xyz.mat']);
+    xyz = [t]
+    datain{i,2} =  load([calfile(i).folder  '/' calfile(i).name '/' 'xyz.mat']);
+    
+    tmp = load([calfile(i).folder  '/' calfile(i).name '/' 'plane.mat']);
+    datain{i,3} =  load([calfile(i).folder  '/' calfile(i).name '/' 'RfF.mat']);
+end
