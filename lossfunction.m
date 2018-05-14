@@ -1,4 +1,4 @@
-%% calculation the loss in optimase the RT between sick and cam
+%% calculation the loss in optimase the RT from sick to cam
 %se(1:3) = roll yaw pitch
 %se(4:6) = tx ty tz
 function loss_back = lossfunction (se,datain)
